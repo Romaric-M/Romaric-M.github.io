@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://romaric-m.github.io/style.xsl"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
          xmlns:admin="http://webns.net/mvcb/">
-        <?xml-stylesheet type="text/xsl" href="./style.xsl"?>
 
   <foaf:PersonalProfileDocument rdf:about="">
     <foaf:maker rdf:resource="#romaric" />
