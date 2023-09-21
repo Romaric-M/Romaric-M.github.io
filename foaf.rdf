@@ -4,6 +4,8 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
          xmlns:admin="http://webns.net/mvcb/">
+        <?xml-stylesheet type="text/xsl" href="./style.xsl"?>
+
   <foaf:PersonalProfileDocument rdf:about="">
     <foaf:maker rdf:resource="#romaric" />
     <foaf:primaryTopic rdf:resource="#romaric" />
