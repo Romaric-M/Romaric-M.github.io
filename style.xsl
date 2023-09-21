@@ -25,31 +25,31 @@
             </h2>
             <br />
             <p>
-                <strong>Nickname:</strong>
+                <strong> Nickname:</strong>
                 <xsl:value-of select="foaf:nick" />
             </p>
             <br />
             <p>
-                <strong>Age:</strong>
+                <strong> Age:</strong>
                 <xsl:value-of select="foaf:age" />
             </p>
             <br />
             <p>
-                <strong>Homepage:</strong>
+                <strong> Homepage:</strong>
                 <a href="{foaf:homepage/@rdf:resource}">
                     <xsl:value-of select="foaf:homepage/@rdf:resource" />
                 </a>
             </p>
             <br />
             <p>
-                <strong>Email:</strong>
+                <strong> Email:</strong>
                 <a href="mailto:{foaf:mbox}">
                     <xsl:value-of select="foaf:mbox" />
                 </a>
             </p>
             <br />
             <p>
-                <strong>Phone:</strong>
+                <strong> Phone:</strong>
                 <a href="tel:{foaf:phone}">
                     <xsl:value-of select="foaf:phone" />
                 </a>
@@ -62,19 +62,19 @@
     </xsl:template>
 
     <xsl:template match="foaf:knows">
-        <h3>Knows:</h3>
+        <h3> Knows:</h3>
         <br />
     <ul>
             <!-- Process each known person -->
             <xsl:for-each select="foaf:Person">
                 <li>
                     <p>
-                        <strong>nom: </strong>
+                        <strong> nom: </strong>
                         <xsl:value-of select="foaf:name" />
                     </p>
                     <br />
                     <p>
-                        <strong>homepage : </strong>
+                        <strong> homepage : </strong>
                         <a href="{foaf:homepage/@rdf:resource}">
                             <xsl:value-of select="foaf:homepage/@rdf:resource" />
                         </a>
