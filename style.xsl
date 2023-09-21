@@ -68,6 +68,7 @@
             <!-- Process each known person -->
             <xsl:for-each select="foaf:Person">
                 <li>
+                    <p> Knows : </p>
                     <p>
                         <strong> nom: </strong>
                         <xsl:value-of select="foaf:name" />
