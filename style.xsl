@@ -23,32 +23,38 @@
             <h2>
                 <xsl:value-of select="foaf:name" />
             </h2>
+            <br></br>
             <p>
                 <strong>Nickname:</strong>
                 <xsl:value-of select="foaf:nick" />
             </p>
+            <br></br>
             <p>
                 <strong>Age:</strong>
                 <xsl:value-of select="foaf:age" />
             </p>
+            <br></br>
             <p>
                 <strong>Homepage:</strong>
                 <a href="{foaf:homepage/@rdf:resource}">
                     <xsl:value-of select="foaf:homepage/@rdf:resource" />
                 </a>
             </p>
+            <br></br>
             <p>
                 <strong>Email:</strong>
                 <a href="mailto:{foaf:mbox}">
                     <xsl:value-of select="foaf:mbox" />
                 </a>
             </p>
+            <br></br>
             <p>
                 <strong>Phone:</strong>
                 <a href="tel:{foaf:phone}">
                     <xsl:value-of select="foaf:phone" />
                 </a>
             </p>
+            <br></br>
             <img src="{foaf:img/@rdf:resource}" alt="Profile Picture" />
 
             <xsl:apply-templates select="foaf:knows" />
@@ -57,6 +63,7 @@
 
     <xsl:template match="foaf:knows">
         <h3>Knows:</h3>
+        <br></br>
     <ul>
             <!-- Process each known person -->
             <xsl:for-each select="foaf:Person">
@@ -65,12 +72,14 @@
                         <strong>nom: </strong>
                         <xsl:value-of select="foaf:name" />
                     </p>
+                    <br></br>
                     <p>
                         <strong>homepage : </strong>
                         <a href="{foaf:homepage/@rdf:resource}">
                             <xsl:value-of select="foaf:homepage/@rdf:resource" />
                         </a>
                     </p>
+                    <br></br>
                 </li>
             </xsl:for-each>
         </ul>
