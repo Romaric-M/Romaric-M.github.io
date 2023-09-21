@@ -13,7 +13,7 @@
     <!-- Your personal information -->
     <foaf:name>Romaric Merceron</foaf:name>
     <foaf:nick>Romaric</foaf:nick>
-    <foaf:age>29</foaf:age>
+    <foaf:age>vieux</foaf:age>
     <foaf:homepage rdf:resource="https://romaric-m.github.io" />
     <foaf:img rdf:resource="./img/me.jpg" />
 
