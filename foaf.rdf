@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="https://romaric-m.github.io/style.xsl"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
-         xmlns:dc="http://purl.org/dc/elements/1.1/"
-         xmlns:admin="http://webns.net/mvcb/">
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:admin="http://webns.net/mvcb/">
 
   <foaf:PersonalProfileDocument rdf:about="">
     <foaf:maker rdf:resource="#romaric" />
@@ -17,10 +17,18 @@
     <foaf:nick>Romaric</foaf:nick>
     <foaf:age>vieux</foaf:age>
     <foaf:homepage rdf:resource="https://romaric-m.github.io" />
-    <foaf:img rdf:resource="./img/me.jpg" />
+    <foaf:img rdf:resource="https://romaric-m.github.io/img/me.jpg" />
 
     <!-- Your contact information -->
     <foaf:mbox rdf:resource="blablabla@example.com" />
     <foaf:phone rdf:resource="0000000000" />
   </foaf:Person>
+
+  <foaf:knows>
+    <foaf:Person>
+      <foaf:name>Sylvain Durif</foaf:name>
+      <foaf:homepage rdf:resource="https://not-mxxry.github.io/Exercice1/" />
+    </foaf:Person>
+  </foaf:knows>
+
 </rdf:RDF>

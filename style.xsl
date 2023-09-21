@@ -20,14 +20,60 @@
 
     <xsl:template match="foaf:Person">
         <div>
-            <h2><xsl:value-of select="foaf:name" /></h2>
-            <p><strong>Nickname:</strong> <xsl:value-of select="foaf:nick" /></p>
-            <p><strong>Age:</strong> <xsl:value-of select="foaf:age" /></p>
-            <p><strong>Homepage:</strong> <a href="{foaf:homepage/@rdf:resource}"><xsl:value-of select="foaf:homepage/@rdf:resource" /></a></p>
-            <p><strong>Email:</strong> <a href="mailto:{foaf:mbox}"><xsl:value-of select="foaf:mbox" /></a></p>
-            <p><strong>Phone:</strong> <a href="tel:{foaf:phone}"><xsl:value-of select="foaf:phone" /></a></p>
+            <h2>
+                <xsl:value-of select="foaf:name" />
+            </h2>
+            <p>
+                <strong>Nickname:</strong>
+                <xsl:value-of select="foaf:nick" />
+            </p>
+            <p>
+                <strong>Age:</strong>
+                <xsl:value-of select="foaf:age" />
+            </p>
+            <p>
+                <strong>Homepage:</strong>
+                <a href="{foaf:homepage/@rdf:resource}">
+                    <xsl:value-of select="foaf:homepage/@rdf:resource" />
+                </a>
+            </p>
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:{foaf:mbox}">
+                    <xsl:value-of select="foaf:mbox" />
+                </a>
+            </p>
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:{foaf:phone}">
+                    <xsl:value-of select="foaf:phone" />
+                </a>
+            </p>
             <img src="{foaf:img/@rdf:resource}" alt="Profile Picture" />
+
+            <xsl:apply-templates select="foaf:knows" />
         </div>
+    </xsl:template>
+
+    <xsl:template match="foaf:knows">
+        <h3>Knows:</h3>
+    <ul>
+            <!-- Process each known person -->
+            <xsl:for-each select="foaf:Person">
+                <li>
+                    <p>
+                        <strong>nom: </strong>
+                        <xsl:value-of select="foaf:name" />
+                    </p>
+                    <p>
+                        <strong>homepage : </strong>
+                        <a href="{foaf:homepage/@rdf:resource}">
+                            <xsl:value-of select="foaf:homepage/@rdf:resource" />
+                        </a>
+                    </p>
+                </li>
+            </xsl:for-each>
+        </ul>
     </xsl:template>
 
 </xsl:stylesheet>
