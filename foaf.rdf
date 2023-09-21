@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:admin="http://webns.net/mvcb/">
+  <foaf:PersonalProfileDocument rdf:about="">
+    <foaf:maker rdf:resource="#romaric" />
+    <foaf:primaryTopic rdf:resource="#romaric" />
+  </foaf:PersonalProfileDocument>
+
+  <foaf:Person rdf:about="#romaric">
+    <!-- Your personal information -->
+    <foaf:name>Romaric Merceron</foaf:name>
+    <foaf:nick>Romaric</foaf:nick>
+    <foaf:age>29</foaf:age>
+    <foaf:homepage rdf:resource="./index.html" />
+    <foaf:img rdf:resource="./img/me.jpg" />
+
+    <!-- Your contact information -->
+    <foaf:mbox rdf:resource="blablabla@example.com" />
+    <foaf:phone rdf:resource="0000000000" />
+  </foaf:Person>
+</rdf:RDF>
